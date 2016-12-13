@@ -1,0 +1,33 @@
+{
+  "name": "dek-react",
+  "version": "0.0.1",
+  "description": "dek-react - Development Environment Kit for React applications",
+  "main": "src/index.js",
+  "repository": "git@github.com:ericdouglas/dek-react.git",
+  "author": "Eric Douglas <eric.douglas.mail@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node_modules/npm-run-all/bin/npm-run-all/index.js --parallel open:src lint:watch",
+    "open:src": "node server.js",
+    "lint": "node_modules/eslint-watch/bin/esw src webpack.config.js server.js --color",
+    "lint:watch": "npm run lint -- --watch"
+  },
+  "devDependencies": {
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "eslint": "^3.9.1",
+    "eslint-plugin-react": "^6.8.0",
+    "eslint-watch": "^2.1.14",
+    "npm-run-all": "^3.1.2",
+    "react-hot-loader": "3.0.0-beta.6",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-validator": "^2.2.12"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}
